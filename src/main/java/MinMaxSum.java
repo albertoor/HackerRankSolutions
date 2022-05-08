@@ -7,9 +7,16 @@ public class MinMaxSum {
         long min = arr.get(0), max = min, sum = min;
         for (int i = 1; i < arr.size(); i++) {
             sum += arr.get(i);
-            if (arr.get(i) < min) min = arr.get(i);
-            if (arr.get(i) > max) max = arr.get(i);
+            if (arr.get(i) < min){
+                min = arr.get(i);
+            }
+            if (arr.get(i) > max) {
+                max = arr.get(i);
+            }
         }
+        System.out.println(sum);
+        System.out.println(max);
+        System.out.println(min);
         long minSum = sum - max;
         long maxSum = sum - min;
         System.out.printf("%s %s", minSum, maxSum);
